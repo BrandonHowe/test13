@@ -1,1 +1,49 @@
 
+html {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 36px;
+    color: white;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.newgame {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    float: right;
+    margin-right: 60px;
+    margin-top: 400px;
+}
+
+.optionsbutton {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    float: right;
+    margin-right: -145px;
+    margin-top: 450px;
+}
+
+.status {
+    border-color: white;
+    background-color: white;
+    padding: 3px;
+    border-radius: 3px;
+    border-width: 3px;
+    width: 25%;
+    margin: 3%;
+    float: right;
+    position: relative;
+    top: -50px;
+    height: 500px;
+    z-index: 1;
+    padding: 5px;
+    display: none;
+}
