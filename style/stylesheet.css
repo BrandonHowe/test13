@@ -1,4 +1,3 @@
-
 html {
     font-family: 'Courier New', Courier, monospace;
     background-color: black;
@@ -20,6 +19,11 @@ html {
     float: right;
     margin-right: 60px;
     margin-top: 400px;
+    padding: 5px;
+}
+
+.newgame:hover {
+    background-color: grey;
 }
 
 .optionsbutton {
@@ -27,8 +31,13 @@ html {
     font-size: 30px;
     font-weight: bold;
     float: right;
-    margin-right: -145px;
+    margin-right: -155px;
     margin-top: 450px;
+    padding: 5px;
+}
+
+.optionsbutton:hover {
+    background-color: grey;
 }
 
 .status {
@@ -46,4 +55,143 @@ html {
     z-index: 1;
     padding: 5px;
     display: none;
+}
+
+.titlesetdateanimationbox {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+}
+
+.titlesetdateanimation {
+    position: absolute;
+    top: 50%;
+    display: none;
+    height: 150px;
+    width: 99%;
+    justify-content: center;
+    color: black;
+    font-size: 96px;
+    text-align: center;
+}
+
+.titlesetdateanimationday1 {
+    width: 6%;
+    height: 100px;
+    border-color: white;
+    border-width: 3px;
+    margin: 8px 8px 8px 0px;
+    background-color: white;
+    color: black;
+    font-size: 96px;
+    text-align: center;
+}
+
+.titlesetdateanimationday2 {
+    width: 6%;
+    height: 100px;
+    border-color: white;
+    border-width: 3px;
+    margin: 8px 15px 8px 8px;
+    background-color: white;
+    color: black;
+    font-size: 96px;
+    text-align: center;
+}
+
+.titlesetdateanimationmonth1 {
+    width: 6%;
+    height: 100px;
+    border-color: white;
+    border-width: 3px;
+    margin: 8px;
+    background-color: white;
+    color: black;
+    font-size: 96px;
+    text-align: center;
+}
+
+.titlesetdateanimationmonth2 {
+    width: 6%;
+    height: 100px;
+    border-color: white;
+    border-width: 3px;
+    margin: 8px 15px 8px 8px;
+    background-color: white;
+    color: black;
+    font-size: 96px;
+    text-align: center;
+}
+
+.titlesetdateanimationyear {
+    width: 6%;
+    height: 100px;
+    border-color: white;
+    border-width: 3px;
+    margin: 8px;
+    background-color: white;
+    color: black;
+    font-size: 96px;
+    text-align: center;
+}
+
+.titlesetdateanimationhour {
+    width: 6%;
+    height: 100px;
+    border-color: white;
+    border-width: 3px;
+    margin: 8px 15px 8px 20px;
+    background-color: white;
+    color: black;
+    font-size: 96px;
+    text-align: center;
+}
+
+.titlesetdateanimationminute1 {
+    width: 6%;
+    height: 100px;
+    border-color: white;
+    border-width: 3px;
+    margin: 8px;
+    background-color: white;
+    color: black;
+    font-size: 96px;
+    text-align: center;
+}
+
+.titlesetdateanimationminute2 {
+    width: 6%;
+    height: 100px;
+    border-color: white;
+    border-width: 3px;
+    margin: 8px 15px 8px 8px;
+    background-color: white;
+    color: black;
+    font-size: 96px;
+    text-align: center;
+}
+
+.titlesetdateanimationsecond1 {
+    width: 6%;
+    height: 100px;
+    border-color: white;
+    border-width: 3px;
+    margin: 8px;
+    background-color: white;
+    color: black;
+    font-size: 96px;
+    text-align: center;
+}
+
+.titlesetdateanimationsecond2 {
+    width: 6%;
+    height: 100px;
+    border-color: white;
+    border-width: 3px;
+    margin: 8px 0px 8px 8px;
+    background-color: white;
+    color: black;
+    font-size: 96px;
+    text-align: center;
 }
