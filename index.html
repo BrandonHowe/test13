@@ -3,14 +3,31 @@
   <head>
     <title>Test 13</title>
     <meta charset="UTF-8">
-    <meta name="description" content="A game for the...">
-    <meta name="author" content="PercyCho and xRubiks">
+    <meta name="description" content="A game.">
+    <meta name="author" content="Brandon Howe and PercyCho">
   </head>
   <body>
-    <header class="header">Test 13</header>
+    <header id="header" class="header">Test 13</header>
     <div id="titlescreen">
-      <div id="newgame" class="newgame">New game</div>
+      <div id="newgame" class="newgame" onclick="startnewgame()">New game</div>
       <div id="optionsbutton" class="optionsbutton">Options</div>
+    </div>
+    <div id="titlesetdateanimationbox" class="titlesetdateanimationbox">
+      <div id="titlesetdateanimation" class="titlesetdateanimation">
+        <div id="titlesetdateanimationday1" class="titlesetdateanimationday1"></div>
+        <div id="titlesetdateanimationday2" class="titlesetdateanimationday2"></div>
+        <div id="titlesetdateanimationmonth1" class="titlesetdateanimationmonth1"></div>
+        <div id="titlesetdateanimationmonth2" class="titlesetdateanimationmonth2"></div>
+        <div id="titlesetdateanimationyear1" class="titlesetdateanimationyear"></div>
+        <div id="titlesetdateanimationyear2" class="titlesetdateanimationyear"></div>
+        <div id="titlesetdateanimationyear3" class="titlesetdateanimationyear"></div>
+        <div id="titlesetdateanimationyear4" class="titlesetdateanimationyear"></div>
+        <div id="titlesetdateanimationhour1" class="titlesetdateanimationhour"></div>
+        <div id="titlesetdateanimationminute1" class="titlesetdateanimationminute1"></div>
+        <div id="titlesetdateanimationminute2" class="titlesetdateanimationminute2"></div>
+        <div id="titlesetdateanimationsecond1" class="titlesetdateanimationsecond1"></div>
+        <div id="titlesetdateanimationsecond2" class="titlesetdateanimationsecond2"></div>
+      </div>
     </div>
     <div id="gamescreen" class="gamescreen">
       <div id="mainarea" class="mainarea"></div>
@@ -22,4 +39,4 @@
 </html>
 
 <link rel="stylesheet" type="text/css" href="style/stylesheet.css" />
-
+<script type="text/javascript" src="src/main.js"></script>
