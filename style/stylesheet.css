@@ -1,5 +1,5 @@
 html {
-    font-family: 'Consolas';
+    font-family: 'Courier New', Courier, monospace;
     background-color: black;
 }
 
@@ -24,7 +24,6 @@ html {
 
 .newgame:hover {
     background-color: grey;
-    border: 2px solid white;
 }
 
 .optionsbutton {
@@ -39,22 +38,6 @@ html {
 
 .optionsbutton:hover {
     background-color: grey;
-    border: 2px solid white;
-}
-
-.aboutbutton {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    float: right;
-    margin-right: -155px;
-    margin-top: 500px;
-    padding: 5px;   
-}
-
-.aboutbutton:hover {
-    background-color: grey;
-    border: 2px solid white;   
 }
 
 .status {
