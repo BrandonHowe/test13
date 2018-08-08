@@ -1,5 +1,5 @@
 html {
-    font-family: 'Consalas';
+    font-family: 'Consolas';
     background-color: black;
 }
 
@@ -47,7 +47,14 @@ html {
     font-size: 30px;
     font-weight: bold;
     float: right;
-    
+    margin-right: -155px;
+    margin-top: 500px;
+    padding: 5px;   
+}
+
+.aboutbutton:hover {
+    background-color: grey;
+    border: 2px solid white;   
 }
 
 .status {
