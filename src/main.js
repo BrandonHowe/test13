@@ -4,8 +4,20 @@ let startnewgamenumberanimationobject = {
     bignumbertens: 0,
     bignumberhundreds: 0,
     bignumberkilos: 0,
+    bignumberkilogain: 1,
     bignumbertkilos: 0,
+    bignumbertkilogain: 1,
+    bignumberhkilos: 0,
+    bignumberhkilogain: 1,
+    bignumbermils: 0,
+    bignumbertmils: 0,
+    bignumberhmils: 0,
+    bignumberbils: 0,
+    bignumbertbils: 0,
+    bignumberhbils: 0,
+    bignumbertrils: 0,
     timedelay: 500,
+    finished: 0,
 }
 
 function O (i) {
@@ -54,23 +66,14 @@ function startnewgamenumberanimationloop () {
                     startnewgamenumberanimationobject.bignumberdigits = 0;
                     startnewgamenumberanimationobject.bignumbertens = 0;
                     startnewgamenumberanimationobject.bignumberhundreds = 0;
-                    startnewgamenumberanimationobject.bignumberkilos++;
+                    startnewgamenumberanimationobject.bignumberkilos += startnewgamenumberanimationobject.bignumberkilogain;
                     O('titlesetdateanimationsecond2').innerHTML = startnewgamenumberanimationobject.bignumberdigits;
                     O('titlesetdateanimationsecond1').innerHTML = startnewgamenumberanimationobject.bignumbertens;
                     O('titlesetdateanimationminute2').innerHTML = startnewgamenumberanimationobject.bignumberhundreds;
                     O('titlesetdateanimationminute1').innerHTML = startnewgamenumberanimationobject.bignumberkilos;
                 } else {
-                    if (startnewgamenumberanimationobject.bignumbertkilos != 9) {
-                        startnewgamenumberanimationobject.bignumberdigits = 0;
-                        startnewgamenumberanimationobject.bignumbertens = 0;
-                        startnewgamenumberanimationobject.bignumberhundreds = 0;
-                        startnewgamenumberanimationobject.bignumberkilos = 0;
-                        startnewgamenumberanimationobject.bignumbertkilos++;
-                        O('titlesetdateanimationsecond2').innerHTML = startnewgamenumberanimationobject.bignumberdigits;
-                        O('titlesetdateanimationsecond1').innerHTML = startnewgamenumberanimationobject.bignumbertens;
-                        O('titlesetdateanimationminute2').innerHTML = startnewgamenumberanimationobject.bignumberhundreds;
-                        O('titlesetdateanimationminute1').innerHTML = startnewgamenumberanimationobject.bignumberkilos;
-                        O('titlesetdateanimationhour1').innerHTML = startnewgamenumberanimationobject.bignumbertkilos;
+                    if (startnewgamenumberanimationobject.bignumbertrils < 9) {
+                        startnewgameanimationloopspeedup2();
                     }
                 }
             }
@@ -81,7 +84,10 @@ function startnewgamenumberanimationloop () {
     if (startnewgamenumberanimationobject.timedelay > 1) {
         startnewgamenumberanimationobject.timedelay -= 10;
     }
-    startnewgamenumberanimation();
+    if (startnewgamenumberanimationobject.finished != 1) {
+        startnewgamenumberanimation();
+    }
+    
 }
 
 function startnewgameanimationloopspeedup () {
@@ -91,5 +97,90 @@ function startnewgameanimationloopspeedup () {
     O('titlesetdateanimationsecond2').innerHTML = startnewgamenumberanimationobject.bignumberdigits;
     O('titlesetdateanimationsecond1').innerHTML = startnewgamenumberanimationobject.bignumbertens;
     O('titlesetdateanimationminute2').innerHTML = startnewgamenumberanimationobject.bignumberhundreds;
-    setTimeout(startnewgameanimationloopspeedup, 1);
+    O('titlesetdateanimationminute1').innerHTML = startnewgamenumberanimationobject.bignumberkilos;
+    O('titlesetdateanimationhour1').innerHTML = startnewgamenumberanimationobject.bignumbertkilos;
+    O('titlesetdateanimationyear4').innerHTML = startnewgamenumberanimationobject.bignumberhkilos;
+    if (startnewgamenumberanimationobject.finished != 1) {
+        setTimeout(startnewgameanimationloopspeedup, 1);
+    }
+    setTimeout(startnewgameanimationloopspeedup3, 100);
+}
+
+function startnewgameanimationloopspeedup2 () {
+    if (startnewgamenumberanimationobject.bignumbertrils < 9) {
+        startnewgamenumberanimationobject.bignumberkilos++;
+        startnewgamenumberanimationobject.bignumbertkilos++;
+        O('titlesetdateanimationminute1').innerHTML = startnewgamenumberanimationobject.bignumberkilos;
+        O('titlesetdateanimationhour1').innerHTML = startnewgamenumberanimationobject.bignumbertkilos;
+        setTimeout(startnewgameanimationloopspeedup, 1);
+        setTimeout(startnewgameanimationloopspeedup3, 10);
+    }
+}
+
+function startnewgameanimationloopspeedup3 () {
+    if (startnewgamenumberanimationobject.bignumbertrils < 9) {
+        startnewgamenumberanimationobject.bignumberhkilos++;
+        startnewgamenumberanimationobject.bignumbermils++;
+        O('titlesetdateanimationyear4').innerHTML = startnewgamenumberanimationobject.bignumberhkilos;
+        O('titlesetdateanimationyear3').innerHTML = startnewgamenumberanimationobject.bignumbermils;
+        setTimeout(startnewgameanimationloopspeedup4, 10);
+    }
+}
+
+function startnewgameanimationloopspeedup4 () {
+    if (startnewgamenumberanimationobject.bignumbertrils < 9) {
+        startnewgamenumberanimationobject.bignumbertmils++;
+        startnewgamenumberanimationobject.bignumberhmils++;
+        O('titlesetdateanimationyear2').innerHTML = startnewgamenumberanimationobject.bignumbertmils;
+        O('titlesetdateanimationyear1').innerHTML = startnewgamenumberanimationobject.bignumberhmils;
+        setTimeout(startnewgameanimationloopspeedup5, 10);
+    }
+}
+
+function startnewgameanimationloopspeedup5 () {
+    if (startnewgamenumberanimationobject.bignumbertrils < 9) {
+        startnewgamenumberanimationobject.bignumberbils++;
+        startnewgamenumberanimationobject.bignumbertbils++;
+        O('titlesetdateanimationmonth2').innerHTML = startnewgamenumberanimationobject.bignumberbils;
+        O('titlesetdateanimationmonth1').innerHTML = startnewgamenumberanimationobject.bignumbertbils;
+        setTimeout(startnewgameanimationloopspeedup6, 10);
+    }
+}
+
+function startnewgameanimationloopspeedup6 () {
+    if (startnewgamenumberanimationobject.bignumbertrils < 9) {
+        startnewgamenumberanimationobject.bignumberhbils++;
+        startnewgamenumberanimationobject.bignumbertrils++;
+        O('titlesetdateanimationday2').innerHTML = startnewgamenumberanimationobject.bignumberhbils;
+        O('titlesetdateanimationday1').innerHTML = startnewgamenumberanimationobject.bignumbertrils;
+    }
+    if (startnewgamenumberanimationobject.bignumbertrils >= 9) {
+        startnewgamenumberanimationobject.bignumberdigits = 9;
+        startnewgamenumberanimationobject.bignumbertens = 9;
+        startnewgamenumberanimationobject.bignumberhundreds = 9;
+        startnewgamenumberanimationobject.bignumberkilos = 9;
+        startnewgamenumberanimationobject.bignumbertkilos = 9;
+        startnewgamenumberanimationobject.bignumberhkilos = 9;
+        startnewgamenumberanimationobject.bignumbermils = 9;
+        startnewgamenumberanimationobject.bignumbertmils = 9;
+        startnewgamenumberanimationobject.bignumberhmils = 9;
+        startnewgamenumberanimationobject.bignumberbils = 9;
+        startnewgamenumberanimationobject.bignumbertbils = 9;
+        startnewgamenumberanimationobject.bignumberhbils = 9;
+        startnewgamenumberanimationobject.bignumbertrils = 9;
+        O('titlesetdateanimationsecond2').innerHTML = startnewgamenumberanimationobject.bignumberdigits;
+        O('titlesetdateanimationsecond1').innerHTML = startnewgamenumberanimationobject.bignumbertens;
+        O('titlesetdateanimationminute2').innerHTML = startnewgamenumberanimationobject.bignumberhundreds;
+        O('titlesetdateanimationminute1').innerHTML = startnewgamenumberanimationobject.bignumberkilos;
+        O('titlesetdateanimationhour1').innerHTML = startnewgamenumberanimationobject.bignumbertkilos;
+        O('titlesetdateanimationyear4').innerHTML = startnewgamenumberanimationobject.bignumberhkilos;
+        O('titlesetdateanimationyear3').innerHTML = startnewgamenumberanimationobject.bignumbermils;
+        O('titlesetdateanimationyear2').innerHTML = startnewgamenumberanimationobject.bignumbertmils;
+        O('titlesetdateanimationyear1').innerHTML = startnewgamenumberanimationobject.bignumberhmils;
+        O('titlesetdateanimationmonth2').innerHTML = startnewgamenumberanimationobject.bignumberbils;
+        O('titlesetdateanimationmonth1').innerHTML = startnewgamenumberanimationobject.bignumbertbils;
+        O('titlesetdateanimationday2').innerHTML = startnewgamenumberanimationobject.bignumberhbils;
+        O('titlesetdateanimationday1').innerHTML = startnewgamenumberanimationobject.bignumbertrils;
+        startnewgamenumberanimationobject.finished = 1; 
+    }
 }
