@@ -182,5 +182,118 @@ function startnewgameanimationloopspeedup6 () {
         O('titlesetdateanimationday2').innerHTML = startnewgamenumberanimationobject.bignumberhbils;
         O('titlesetdateanimationday1').innerHTML = startnewgamenumberanimationobject.bignumbertrils;
         startnewgamenumberanimationobject.finished = 1; 
+        setTimeout(startnewgamenumberanimationdecrement, 1000);
+    }
+}
+
+function startnewgamenumberanimationdecrement () {
+    if (startnewgamenumberanimationobject.bignumbertrils != 2) {
+        startnewgamenumberanimationobject.bignumbertrils--;
+        O('titlesetdateanimationday1').innerHTML = startnewgamenumberanimationobject.bignumbertrils;
+    }
+    if (startnewgamenumberanimationobject.bignumberhbils != 1) {
+        startnewgamenumberanimationobject.bignumberhbils--;
+        O('titlesetdateanimationday2').innerHTML = startnewgamenumberanimationobject.bignumberhbils;
+    }
+    if (startnewgamenumberanimationobject.bignumbertrils != 2 || startnewgamenumberanimationobject.bignumberhbils != 1) {
+        setTimeout(startnewgamenumberanimationdecrement, 100);
+    }
+    if (startnewgamenumberanimationobject.bignumbertrils === 2 && startnewgamenumberanimationobject.bignumberhbils === 1) {
+        startnewgamenumberanimationdecrement2();
+    }
+}
+
+function startnewgamenumberanimationdecrement2 () {
+    if (startnewgamenumberanimationobject.bignumbertbils != 0) {
+        startnewgamenumberanimationobject.bignumbertbils--;
+        O('titlesetdateanimationmonth1').innerHTML = startnewgamenumberanimationobject.bignumbertbils;
+    }
+    if (startnewgamenumberanimationobject.bignumberbils != 4) {
+        startnewgamenumberanimationobject.bignumberbils--;
+        O('titlesetdateanimationmonth2').innerHTML = startnewgamenumberanimationobject.bignumberbils;
+    }
+    if (startnewgamenumberanimationobject.bignumbertbils != 0 || startnewgamenumberanimationobject.bignumberbils != 4) {
+        setTimeout(startnewgamenumberanimationdecrement2, 100);
+    }
+    if (startnewgamenumberanimationobject.bignumbertbils === 0 && startnewgamenumberanimationobject.bignumberbils === 4) {
+        startnewgamenumberanimationdecrement3();
+    }
+}
+
+function startnewgamenumberanimationdecrement3 () {
+    if (startnewgamenumberanimationobject.bignumberhmils != 2) {
+        startnewgamenumberanimationobject.bignumberhmils--;
+        O('titlesetdateanimationyear1').innerHTML = startnewgamenumberanimationobject.bignumberhmils;
+    }
+    if (startnewgamenumberanimationobject.bignumbertmils != 1) {
+        startnewgamenumberanimationobject.bignumbertmils--;
+        O('titlesetdateanimationyear2').innerHTML = startnewgamenumberanimationobject.bignumbertmils;
+    }
+    if (startnewgamenumberanimationobject.bignumberhmils != 2 || startnewgamenumberanimationobject.bignumbertmils != 1) {
+        setTimeout(startnewgamenumberanimationdecrement3, 100);
+    }
+    if (startnewgamenumberanimationobject.bignumberhmils === 2 && startnewgamenumberanimationobject.bignumbertmils === 1) {
+        startnewgamenumberanimationdecrement4();
+    }
+}
+
+function startnewgamenumberanimationdecrement4 () {
+    if (startnewgamenumberanimationobject.bignumbermils != 0) {
+        startnewgamenumberanimationobject.bignumbermils--;
+        O('titlesetdateanimationyear3').innerHTML = startnewgamenumberanimationobject.bignumbermils;
+    }
+    if (startnewgamenumberanimationobject.bignumberhkilos != 3) {
+        startnewgamenumberanimationobject.bignumberhkilos--;
+        O('titlesetdateanimationyear4').innerHTML = startnewgamenumberanimationobject.bignumberhkilos;
+    }
+    if (startnewgamenumberanimationobject.bignumbermils != 0 || startnewgamenumberanimationobject.bignumberhkilos != 3) {
+        setTimeout(startnewgamenumberanimationdecrement4, 100);
+    }
+    if (startnewgamenumberanimationobject.bignumbermils === 0 && startnewgamenumberanimationobject.bignumberhkilos === 3) {
+        startnewgamenumberanimationdecrement5();
+    }
+}
+
+function startnewgamenumberanimationdecrement5 () {
+    if (startnewgamenumberanimationobject.bignumbertkilos != 5) {
+        startnewgamenumberanimationobject.bignumbertkilos--;
+        O('titlesetdateanimationhour1').innerHTML = startnewgamenumberanimationobject.bignumbertkilos;
+        if (startnewgamenumberanimationobject.bignumbertkilos != 5) {
+            setTimeout(startnewgamenumberanimationdecrement5, 100);
+        }
+    }
+    if (startnewgamenumberanimationobject.bignumbertkilos === 5) {
+        startnewgamenumberanimationdecrement6();
+    }
+}
+
+function startnewgamenumberanimationdecrement6 () {
+    if (startnewgamenumberanimationobject.bignumberkilos != 3) {
+        startnewgamenumberanimationobject.bignumberkilos--;
+        O('titlesetdateanimationminute1').innerHTML = startnewgamenumberanimationobject.bignumberkilos;
+    }
+    if (startnewgamenumberanimationobject.bignumberhundreds != 5) {
+        startnewgamenumberanimationobject.bignumberhundreds--;
+        O('titlesetdateanimationminute2').innerHTML = startnewgamenumberanimationobject.bignumberhundreds;
+    }
+    if (startnewgamenumberanimationobject.bignumberkilos != 3 || startnewgamenumberanimationobject.bignumberhundreds != 5) {
+        setTimeout(startnewgamenumberanimationdecrement6, 100);
+    }
+    if (startnewgamenumberanimationobject.bignumberkilos === 3 && startnewgamenumberanimationobject.bignumberhundreds === 5) {
+        startnewgamenumberanimationdecrement7();
+    }
+}
+
+function startnewgamenumberanimationdecrement7 () {
+    if (startnewgamenumberanimationobject.bignumbertens != 1) {
+        startnewgamenumberanimationobject.bignumbertens--;
+        O('titlesetdateanimationsecond1').innerHTML = startnewgamenumberanimationobject.bignumbertens;
+    }
+    if (startnewgamenumberanimationobject.bignumberdigits != 3) {
+        startnewgamenumberanimationobject.bignumberdigits--;
+        O('titlesetdateanimationsecond2').innerHTML = startnewgamenumberanimationobject.bignumberdigits;
+    }
+    if (startnewgamenumberanimationobject.bignumbertens != 1 || startnewgamenumberanimationobject.bignumberdigits != 3) {
+        setTimeout(startnewgamenumberanimationdecrement7, 100);
     }
 }
