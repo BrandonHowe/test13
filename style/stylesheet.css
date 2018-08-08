@@ -1,5 +1,5 @@
 html {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Consalas';
     background-color: black;
 }
 
@@ -40,6 +40,14 @@ html {
 .optionsbutton:hover {
     background-color: grey;
     border: 2px solid white;
+}
+
+.aboutbutton {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    float: right;
+    
 }
 
 .status {
