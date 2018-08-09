@@ -20,12 +20,29 @@ let startnewgamenumberanimationobject = {
     finished: 0,
 }
 
+var typewriter = {
+    speed: 50,
+    i: 0,
+}
+
 function O (i) {
     return document.getElementById(i);
 }
 
 function S (i) {
     return O(i).style;
+}
+
+function typeWriter(a, b) {
+    if (undefined !== b && b.length) {
+        b = b.toString();
+        if (typewriter.i < b.length) {
+            console.log(b.length);
+            document.getElementById(a).innerHTML += b.charAt(typewriter.i);
+            typewriter.i++;
+            setTimeout(typeWriter, typewriter.speed, a, b);
+        }
+    }
 }
 
 function startnewgame () {
@@ -62,6 +79,7 @@ function startnewgamenumberanimationloop () {
                 O('titlesetdateanimationsecond1').innerHTML = startnewgamenumberanimationobject.bignumbertens;
                 O('titlesetdateanimationminute2').innerHTML = startnewgamenumberanimationobject.bignumberhundreds;
             } else {
+                O('titlesetdateanimationheader').innerHTML = 'Initializing characters and tilesets';
                 if (startnewgamenumberanimationobject.bignumberkilos != 9) {
                     startnewgamenumberanimationobject.bignumberdigits = 0;
                     startnewgamenumberanimationobject.bignumbertens = 0;
@@ -107,6 +125,7 @@ function startnewgameanimationloopspeedup () {
 }
 
 function startnewgameanimationloopspeedup2 () {
+    O('titlesetdateanimationheader').innerHTML = 'Finishing game initialization'
     if (startnewgamenumberanimationobject.bignumbertrils < 9) {
         startnewgamenumberanimationobject.bignumberkilos++;
         startnewgamenumberanimationobject.bignumbertkilos++;
@@ -183,6 +202,7 @@ function startnewgameanimationloopspeedup6 () {
         O('titlesetdateanimationday1').innerHTML = startnewgamenumberanimationobject.bignumbertrils;
         startnewgamenumberanimationobject.finished = 1; 
         setTimeout(startnewgamenumberanimationdecrement, 1000);
+        O('titlesetdateanimationheader').innerHTML = 'Setting date and time';
     }
 }
 
@@ -296,4 +316,19 @@ function startnewgamenumberanimationdecrement7 () {
     if (startnewgamenumberanimationobject.bignumbertens != 1 || startnewgamenumberanimationobject.bignumberdigits != 3) {
         setTimeout(startnewgamenumberanimationdecrement7, 100);
     }
+    if (startnewgamenumberanimationobject.bignumbertens === 1 && startnewgamenumberanimationobject.bignumberdigits === 3) {
+        setTimeout(startnewgameimageanimation, 2000);
+    }
+}
+
+function startnewgameimageanimation () {
+    O('titlesetdateanimationbox').style.display = 'none';
+    O('startnewgameimagebox').style.display = 'flex';
+    setTimeout(startTutorial, 5000);
+}
+
+function startTutorial () {
+    O('startnewgameimagebox').style.display = 'none';
+    O('tutorialbox').style.display = 'inline-block';
+    typeWriter('tutorialbox', 'Hello! I am Mown. I am your guide to this game and only a figment of your imagination! What am I? I am your soul, Thomas. When you talk to me, you are basically talking to yourself. Understand?')
 }
