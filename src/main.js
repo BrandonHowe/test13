@@ -330,5 +330,5 @@ function startnewgameimageanimation () {
 function startTutorial () {
     O('startnewgameimagebox').style.display = 'none';
     O('tutorialbox').style.display = 'inline-block';
-    typeWriter('tutorialbox', 'Hello! I am Mown. I am your guide to this game and only a figment of your imagination! What am I? I am your soul, Thomas. When you talk to me, you are basically talking to yourself. Understand?')
+    typeWriter('tutorialbox', 'Hello! I am Mown. I am your guide to this game! I will show the way around this town and many others as you play. Do you understand?')
 }
