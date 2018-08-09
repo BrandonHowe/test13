@@ -3,6 +3,13 @@ html {
     background-color: black;
 }
 
+.test13startmenuimg {
+    width: 75%;
+    position: relative;
+    bottom: -100px;
+    left: -75px;
+}
+
 .header {
     font-weight: bold;
     font-size: 36px;
@@ -62,6 +69,14 @@ html {
     height: 100%;
     display: none;
     justify-content: center;
+}
+
+.titlesetdateanimationheader {
+    color: grey;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Arial Black';
+    margin-top: 10%;
 }
 
 .titlesetdateanimation {
@@ -194,4 +209,26 @@ html {
     color: black;
     font-size: 96px;
     text-align: center;
+}
+
+.startnewgameimagebox {
+    display: none;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    top: 200px;
+    left: 40%;
+}
+
+.tutorialbox {
+    background-color: orange;
+    border-color: blue;
+    color: blue;
+    font-size: 36px;
+    border-radius: 15px;
+    border-width: 15px;
+    border-style: inset;
+    width: 80%;
+    height: 500px;
+    display: none;
 }
