@@ -221,14 +221,81 @@ html {
 }
 
 .tutorialbox {
-    background-color: orange;
-    border-color: blue;
-    color: blue;
+    background-color: #FEFE33;
+    border-color: #4424D6;
+    color: #C21460;
     font-size: 36px;
     border-radius: 15px;
     border-width: 15px;
-    border-style: inset;
+    border-style: ridge;
+    position: relative;
+    left: 10%;
+    top: 50px;
     width: 80%;
     height: 500px;
+    display: none;
+}
+
+.tutorialboxwords {
+    color: #C21460;
+    font-weight: bold;
+    font-size: 36px;
+    display: none;
+    z-index: 2;
+    padding: 5px;
+    text-align: justify;
+}
+
+.answertutorial0 {
+    border-radius: 10px;
+    border-width: 10px;
+    color: orange;
+    background-color: white;
+    border-color: orange;
+    border: solid;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 45%;
+    top: 80%;
+    padding: 5px;
+    width: 10%;
+    display: none;
+}
+
+.answertutorial1 {
+    border-radius: 10px;
+    border-width: 15px;
+    color: orange;
+    background-color: white;
+    border-color: orange;
+    border: solid;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 28%;
+    top: 80%;
+    padding: 5px;
+    width: 10%;
+    display: none;
+}
+
+.answertutorial2 {
+    border-radius: 10px;
+    border-width: 15px;
+    color: orange;
+    background-color: white;
+    border-color: orange;
+    border: solid;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 61%;
+    top: 80%;
+    padding: 5px;
+    width: 10%;
     display: none;
 }
