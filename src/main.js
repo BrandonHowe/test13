@@ -20,9 +20,18 @@ let startnewgamenumberanimationobject = {
     finished: 0,
 }
 
+var tutorialspeech = [
+    'See that button you just clicked? That is an orange button. Orange buttons are for dialogue and communication! When you want to talk to someone, you use the orange button! How about some practice? How are you?',
+    'Great! That is the power of the orange button. Now look at my text. See this font? It is my voice. Every character has a different font, or voice. It is just a heads up for when you meet someone new. Hey, how about we go into the game itself?',
+    'I am sorry to hear that. Anyway, that is the power of the orange button. Now look at my text. See this font? It is my voice. Every character has a different font, or voice. It is just a heads up for when you meet someone new. Hey, how about we go into the game itself?'
+];
+
 var typewriter = {
-    speed: 50,
+    speed: 100,
     i: 0,
+    finished: 0,
+    tutorial: 0,
+    tutorialstage: 0,
 }
 
 function O (i) {
@@ -36,11 +45,30 @@ function S (i) {
 function typeWriter(a, b) {
     if (undefined !== b && b.length) {
         b = b.toString();
+        if (b === 'escape') {
+            document.getElementById(a).innerHTML = '';
+            typewriter.i = 0;
+            return;
+        }
         if (typewriter.i < b.length) {
-            console.log(b.length);
             document.getElementById(a).innerHTML += b.charAt(typewriter.i);
             typewriter.i++;
             setTimeout(typeWriter, typewriter.speed, a, b);
+        }
+        if (typewriter.i >= b.length) {
+            tutorialswitch();
+        }
+    }
+}
+
+function tutorialswitch () {
+    typewriter.finished = 1;
+    if (typewriter.tutorial === 0) {
+        if (typewriter.tutorialstage >= 1) {
+            answer1buttonappear();
+            console.log('test');
+        } else {
+            answer0buttonappear();
         }
     }
 }
@@ -330,5 +358,31 @@ function startnewgameimageanimation () {
 function startTutorial () {
     O('startnewgameimagebox').style.display = 'none';
     O('tutorialbox').style.display = 'inline-block';
-    typeWriter('tutorialbox', 'Hello! I am Mown. I am your guide to this game! I will show the way around and help you throughout the game. Do you understand?')
+    O('tutorialboxwords').style.display = 'inline-block';
+    typeWriter('tutorialboxwords', 'Hello! I am Mown. I am your guide to this game! I will show the way around and help you throughout the game. Do you understand?')
+}
+
+function answer0buttonappear () {
+    S('answer0').display = 'inline-block';
+}
+
+function answer0tutorial () {
+    if (typewriter.finished = 1) {
+        typeWriter('tutorialboxwords', 'escape');
+        typeWriter('tutorialboxwords', tutorialspeech[0]);
+        S('answer0').display = 'none';
+        typewriter.finished = 0;
+        typewriter.tutorialstage = 1;
+        typewriter.speed = 50;
+        answer1tutorial();
+    }
+}
+
+function answer1buttonappear () {
+    S('answer1').display = 'inline-block';
+    S('answer2').display = 'inline-block';
+}
+
+function answer1tutorial () {
+
 }
