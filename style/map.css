@@ -1,0 +1,157 @@
+#maparea {
+    width: 450px;
+    height: 600px;
+    position: relative;
+}
+
+.purplewall {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #3F51B5;
+}
+
+.orangefloor {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #ff7043;
+}
+
+.blackframe {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: black;
+}
+
+.browndoor {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #795548;
+}
+
+.orangecarpet {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #FF5722;
+}
+
+.whitepaper {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: white;
+}
+
+.trashcanborder {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #9E9E9E
+}
+
+.trashcaninside1 {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #37474F;
+}
+
+.trashcaninside2 {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #607D8B;
+}
+
+.trashcaninside3 {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #78909C;
+}
+
+.browndeskborder {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #573E35;
+}
+
+.browndesk {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #795548;
+}
+
+.purplepillow {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #7C4DFF;
+}
+
+.tealsheets {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #448AFF;
+}
+
+.blueblanket {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #2962FF;
+}
+
+.tancabinet {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #F1C27D;
+}
+
+.browncabinet {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #E0AC69;
+}
+
+.brownhandle {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #C68642;
+}
+
+.goldhandle {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    float: left;
+    background-color: #FF9800;
+}
