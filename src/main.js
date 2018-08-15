@@ -64,9 +64,11 @@ function typeWriter(a, b) {
 function tutorialswitch () {
     typewriter.finished = 1;
     if (typewriter.tutorial === 0) {
-        if (typewriter.tutorialstage >= 1) {
+        if (typewriter.tutorialstage >= 2) {
+            answer3buttonappear();
+        }
+        if (typewriter.tutorialstage == 1) {
             answer1buttonappear();
-            console.log('test');
         } else {
             answer0buttonappear();
         }
@@ -374,7 +376,6 @@ function answer0tutorial () {
         typewriter.finished = 0;
         typewriter.tutorialstage = 1;
         typewriter.speed = 50;
-        answer1tutorial();
     }
 }
 
@@ -384,5 +385,35 @@ function answer1buttonappear () {
 }
 
 function answer1tutorial () {
+    if (typewriter.finished = 1) {
+        typeWriter('tutorialboxwords', 'escape');
+        typeWriter('tutorialboxwords', tutorialspeech[1]);
+        S('answer1').display = 'none';
+        S('answer2').display = 'none';
+        typewriter.finished = 0;
+        typewriter.tutorialstage = 2;
+    }
+}
 
+function answer2tutorial () {
+    if (typewriter.finished = 1) {
+        typeWriter('tutorialboxwords', 'escape');
+        typeWriter('tutorialboxwords', tutorialspeech[2]);
+        S('answer1').display = 'none';
+        S('answer2').display = 'none';
+        typewriter.finished = 0;
+        typewriter.tutorialstage = 2;
+    }
+}
+
+function answer3buttonappear () {
+    S('answer3').display = 'inline-block';
+}
+
+function answer3tutorial () {
+    if (typewriter.finished = 1) {
+        typeWriter('tutorialboxwords', 'escape');
+        S('tutorialbox').display = 'none';
+        drawthomashousemap();
+    }
 }
