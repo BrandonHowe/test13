@@ -43,7 +43,7 @@ function S (i) {
 }
 
 $(document).ready() {
-    if (localStorage.getIteam(hasnewgamestarted) == 1) {
+    if (localStorage.getItem(hasnewgamestarted) == 1) {
         $("#newgame").html = "Resume game";
         $("#newgame").attr("onclick", "startnewgameimageanimation()");
     }
