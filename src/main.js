@@ -42,6 +42,13 @@ function S (i) {
     return O(i).style;
 }
 
+$(document).ready() {
+    if (hasnewgamestarted == 1) {
+        $("#newgame").html = "Resume game";
+        $("#newgame").attr("onclick", "startnewgameimageanimation()");
+    }
+}
+
 function typeWriter(a, b) {
     if (undefined !== b && b.length) {
         b = b.toString();
