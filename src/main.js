@@ -43,7 +43,7 @@ function S (i) {
 }
 
 $(document).ready() {
-    if (hasnewgamestarted == 1) {
+    if (localStorage.getIteam(hasnewgamestarted) == 1) {
         $("#newgame").html = "Resume game";
         $("#newgame").attr("onclick", "startnewgameimageanimation()");
     }
@@ -365,6 +365,8 @@ function startnewgameimageanimation () {
 }
 
 function startTutorial () {
+    hasnewgamestarted = 1;
+    localStorage.setItem('hasnewgamestarted', 1);
     O('startnewgameimagebox').style.display = 'none';
     O('tutorialbox').style.display = 'inline-block';
     O('tutorialboxwords').style.display = 'inline-block';
