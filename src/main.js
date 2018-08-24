@@ -42,13 +42,6 @@ function S (i) {
     return O(i).style;
 }
 
-$(document).ready() {
-    if (localStorage.getItem(hasnewgamestarted) == 1) {
-        $("#newgame").html = "Resume game";
-        $("#newgame").attr("onclick", "startnewgameimageanimation()");
-    }
-}
-
 function typeWriter(a, b) {
     if (undefined !== b && b.length) {
         b = b.toString();
@@ -365,8 +358,6 @@ function startnewgameimageanimation () {
 }
 
 function startTutorial () {
-    hasnewgamestarted = 1;
-    localStorage.setItem('hasnewgamestarted', 1);
     O('startnewgameimagebox').style.display = 'none';
     O('tutorialbox').style.display = 'inline-block';
     O('tutorialboxwords').style.display = 'inline-block';
