@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="description" content="A game.">
     <meta name="author" content="Brandon Howe and PercyCho">
+    <link rel="stylesheet" type="text/css" href="style/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="style/map.css" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   </head>
   <body>
     <header id="header" class="header">Test 13</header>
@@ -12,6 +15,19 @@
       <img id="test13startmenuimg" class="test13startmenuimg" src="test13startmenu.png"></img>
       <div id="newgame" class="newgame" onclick="startnewgame()">New game</div>
       <div id="optionsbutton" class="optionsbutton">Options</div>
+      <div id="optionsmodal" class="optionsmodal">
+        <div id="optionsmodalcontent" class="optionsmodalcontent">
+          <h3>Options</h3>
+          <p>This is the options screen. Here you can change options, such as your theme. You can also reset your save here. Click anywhere outside of this screen to close it.</p>
+          <div id="placeholder" class="placeholder">Placeholder</div>
+          <div id="placeholder2" class="placeholder">Placeholder</div>
+          <div id="placeholder3" class="placeholder">Placeholder</div>
+          <div id="resetgame" class="resetgame">Reset game</div>
+          <div id="optionslog" class="optionslog">
+            <p id="optionslogtext" class="optionslogtext"></p>
+          </div>
+        </div>
+      </div>
     </div>
     <div id="titlesetdateanimationbox" class="titlesetdateanimationbox">
       <h2 id='titlesetdateanimationheader' class='titlesetdateanimationheader'>Initializing time and date</h2>
@@ -49,10 +65,6 @@
     </div>
   </body>
 </html>
-
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-<link rel="stylesheet" type="text/css" href="style/stylesheet.css" />
-<link rel="stylesheet" type="text/css" href="style/map.css" />
 <script type="text/javascript" src="src/main.js"></script>
 <script type="text/javascript" src="src/map.js"></script>
 
