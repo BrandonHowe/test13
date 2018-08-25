@@ -6,7 +6,7 @@ html {
 .test13startmenuimg {
     width: 75%;
     position: relative;
-    bottom: -100px;
+    bottom: 0px;
     left: -75px;
 }
 
@@ -45,6 +45,52 @@ html {
 
 .optionsbutton:hover {
     background-color: grey;
+}
+
+.optionsmodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.optionsmodalcontent {
+    background-color: #000000;
+    margin: 15% auto;
+    padding: 20px;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 50%;
+    color: #fff; 
+}
+
+.placeholder {
+    background-color: #333;
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.placeholder:hover {
+    background-color: #888;
+}
+
+.resetgame {
+    background-color: #333;
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.resetgame:hover {
+    background-color: #888;
 }
 
 .status {
