@@ -20,6 +20,10 @@ let startnewgamenumberanimationobject = {
     finished: 0,
 }
 
+var savestate = {
+    hasnewgamestarted: 0,
+}
+
 var tutorialspeech = [
     'See that button you just clicked? That is an orange button. Orange buttons are for dialogue and communication! When you want to talk to someone, you use the orange button! How about some practice? How are you?',
     'Great! That is the power of the orange button. Now look at my text. See this font? It is my voice. Every character has a different font, or voice. It is just a heads up for when you meet someone new. Hey, how about we go into the game itself?',
@@ -43,11 +47,30 @@ function S (i) {
 }
 
 $(document).ready(function() {	
-    if (localStorage.getItem(hasnewgamestarted) == 1) {	
+    if (localStorage.getItem('hasnewgamestarted') == 1) {	
         $("#newgame").html = "Resume game";	
         $("#newgame").attr("onclick", "startnewgameimageanimation()");	
     }	
 });
+
+var optionsmodal = document.getElementById('optionsmodal');
+var optionsbutton = document.getElementById('optionsbutton');
+optionsbutton.onclick = function () {
+    optionsmodal.style.display = "block";
+}
+
+window.onclick = function(event) {
+    if (event.target == optionsmodal) {
+        optionsmodal.style.display = "none";
+        O('optionslogtext').innerHTML = '';
+    }
+}
+
+var resetgame = document.getElementById('resetgame');
+resetgame.onclick = function () {
+    localStorage.clear();
+    O('optionslogtext').innerHTML = 'Save cleared!'
+}
 
 function typeWriter(a, b) {
     if (undefined !== b && b.length) {
@@ -116,7 +139,7 @@ function startnewgamenumberanimationloop () {
                 O('titlesetdateanimationsecond1').innerHTML = startnewgamenumberanimationobject.bignumbertens;
                 O('titlesetdateanimationminute2').innerHTML = startnewgamenumberanimationobject.bignumberhundreds;
             } else {
-                O('titlesetdateanimationheader').innerHTML = 'Initializing characters and tilesets';
+                O('titlesetdateanimationheader').innerHTML = 'Initializing other techy stuff';
                 if (startnewgamenumberanimationobject.bignumberkilos != 9) {
                     startnewgamenumberanimationobject.bignumberdigits = 0;
                     startnewgamenumberanimationobject.bignumbertens = 0;
@@ -359,6 +382,8 @@ function startnewgamenumberanimationdecrement7 () {
 }
 
 function startnewgameimageanimation () {
+    O('titlescreen').style.display = 'none';
+    O('header').style.display = 'none';
     O('titlesetdateanimationbox').style.display = 'none';
     O('startnewgameimagebox').style.display = 'flex';
     setTimeout(startTutorial, 5000);
@@ -367,6 +392,7 @@ function startnewgameimageanimation () {
 function startTutorial () {
     hasnewgamestarted = 1;	
     localStorage.setItem('hasnewgamestarted', 1);
+    O('titlescreen').display = 'none';
     O('startnewgameimagebox').style.display = 'none';
     O('tutorialbox').style.display = 'inline-block';
     O('tutorialboxwords').style.display = 'inline-block';
@@ -423,6 +449,7 @@ function answer3tutorial () {
     if (typewriter.finished = 1) {
         typeWriter('tutorialboxwords', 'escape');
         S('tutorialbox').display = 'none';
+        S('maparea').display = 'inline-block';
         drawthomashousemap();
     }
 }
