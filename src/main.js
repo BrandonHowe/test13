@@ -48,7 +48,7 @@ function S (i) {
 
 $(document).ready(function() {	
     if (localStorage.getItem('hasnewgamestarted') == 1) {	
-        $("#newgame").html = "Resume game";	
+        O('newgame').innerHTML = 'Resume game';
         $("#newgame").attr("onclick", "startnewgameimageanimation()");	
     }	
 });
