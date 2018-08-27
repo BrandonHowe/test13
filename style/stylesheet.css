@@ -27,6 +27,7 @@ html {
     margin-right: 60px;
     margin-top: 400px;
     padding: 5px;
+    position: relative;
 }
 
 .newgame:hover {
@@ -91,23 +92,6 @@ html {
 
 .resetgame:hover {
     background-color: #888;
-}
-
-.status {
-    border-color: white;
-    background-color: white;
-    padding: 3px;
-    border-radius: 3px;
-    border-width: 3px;
-    width: 25%;
-    margin: 3%;
-    float: right;
-    position: relative;
-    top: -50px;
-    height: 500px;
-    z-index: 1;
-    padding: 5px;
-    display: none;
 }
 
 .titlesetdateanimationbox {
