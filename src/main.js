@@ -22,6 +22,7 @@ let startnewgamenumberanimationobject = {
 
 var savestate = {
     hasnewgamestarted: 0,
+    texttutorialfinished: 0,
 }
 
 var tutorialspeech = [
@@ -47,10 +48,15 @@ function S (i) {
 }
 
 $(document).ready(function() {	
-    if (localStorage.getItem('hasnewgamestarted') == 1) {	
+    if (localStorage.getItem('hasnewgamestarted') == 1) {
         O('newgame').innerHTML = 'Resume game';
-        $("#newgame").attr("onclick", "startnewgameimageanimation()");	
-    }	
+        S('newgame').right = '55px';
+        if (localStorage.getItem('texttutorialfinished') == 1) {
+            $("#newgame").attr("onclick", "drawthomasbedroommap()");
+        } else {
+            $("#newgame").attr("onclick", "startnewgameimageanimation()");	
+        }
+    }
 });
 
 var optionsmodal = document.getElementById('optionsmodal');
@@ -450,6 +456,7 @@ function answer3tutorial () {
         typeWriter('tutorialboxwords', 'escape');
         S('tutorialbox').display = 'none';
         S('maparea').display = 'inline-block';
-        drawthomashousemap();
+        S('status').display = 'inline-block';
+        drawthomasbedroommap();
     }
 }
