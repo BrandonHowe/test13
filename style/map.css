@@ -1,3 +1,16 @@
+.mapdialogue {
+    width: 50%;
+    margin: 4% 5% 0% 0%;
+    z-index: 1;
+    display: none;
+    background-color: #FEFE33;
+    border-color: #4424D6;
+    color: #C21460;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
 #maparea {
     width: 450px;
     height: 600px;
