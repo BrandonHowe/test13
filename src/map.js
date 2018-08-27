@@ -58,7 +58,12 @@ var thomashousemap = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 ]
 
-function drawthomashousemap () {
+function drawthomasbedroommap () {
+    O('header').style.display = 'none';
+    O('titlescreen').style.display = 'none';
+    S('maparea').display = 'inline-block';
+    S('status').display = 'inline-block';
+    localStorage.setItem('texttutorialfinished', 1);
     for (var i = 0; i < 40; i++) {
         for (var j = 0; j < 30; j++) {
             if (parseInt(thomashousemap[i][j]) == 1) {
