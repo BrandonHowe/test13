@@ -7,6 +7,7 @@
     <meta name="author" content="Brandon Howe and PercyCho">
     <link rel="stylesheet" type="text/css" href="style/stylesheet.css" />
     <link rel="stylesheet" type="text/css" href="style/map.css" />
+    <link rel="stylesheet" type="text/css" href="style/status.css" />
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   </head>
   <body>
@@ -58,9 +59,21 @@
       <div id="answer3" class="answertutorial3" onclick="answer3tutorial()">Let's go!</div>
     </div>
     <div id="gamescreen" class="gamescreen">
+      <div id="mapdialogue" class="mapdialogue"></div>
       <div id="maparea" class="maparea"></div>
       <div id="status" class="status">
-        
+        <h1 class="statusheader">Status screen</h1>
+        <h4>Exhaustion</h4>
+        <div id="exhaustionprogress">
+          <div id="exhaustionbar"></div>
+        </div>
+        <h4>Hunger</h4>
+        <div id="hungerprogress">
+          <div id="hungerbar"></div>
+        </div>
+        <h4>Age: 8</h4>
+        <h4>Money: £0</h4>
+        <h4>Backpack: Nothing</h4>
       </div>
     </div>
   </body>
