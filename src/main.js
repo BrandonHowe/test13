@@ -74,8 +74,12 @@ window.onclick = function(event) {
 
 var resetgame = document.getElementById('resetgame');
 resetgame.onclick = function () {
+    var resetgame1 = confirm("Are you sure you want to clear all you saves?");
+    if (resetgame1 == true) {
     localStorage.clear();
     O('optionslogtext').innerHTML = 'Save cleared!'
+    } else { 
+        O('optionslogtext').innerHTML = 'Save not cleared'}
 }
 
 function typeWriter(a, b) {
