@@ -295,6 +295,7 @@ html {
     padding: 5px;
     width: 10%;
     display: none;
+    cursor: pointer;
 }
 
 .answertutorial1 {
@@ -313,6 +314,7 @@ html {
     padding: 5px;
     width: 10%;
     display: none;
+    cursor: pointer;
 }
 
 .answertutorial2 {
@@ -331,6 +333,7 @@ html {
     padding: 5px;
     width: 10%;
     display: none;
+    cursor: pointer;
 }
 
 .answertutorial3 {
@@ -349,4 +352,5 @@ html {
     padding: 5px;
     width: 10%;
     display: none;
+    cursor: pointer;
 }
