@@ -32,6 +32,7 @@ html {
 
 .newgame:hover {
     background-color: grey;
+    cursor: pointer;
 }
 
 .optionsbutton {
@@ -46,6 +47,7 @@ html {
 
 .optionsbutton:hover {
     background-color: grey;
+    cursor: pointer;
 }
 
 .optionsmodal {
@@ -92,6 +94,7 @@ html {
 
 .resetgame:hover {
     background-color: #888;
+    cursor: context-menu;
 }
 
 .titlesetdateanimationbox {
